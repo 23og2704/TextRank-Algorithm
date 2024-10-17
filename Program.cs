@@ -14,6 +14,8 @@ namespace TextRank_Algorithm
         }
         public void addEdge(string kw1, string kw2)
         {
+            if (kw1 == kw2) return;
+            
             if (!adjList.ContainsKey(kw1)) adjList[kw1] = new List<string>();
             if (!adjList.ContainsKey(kw2)) adjList[kw2] = new List<string>();
             if (!adjList[kw1].Contains(kw2)) adjList[kw1].Add(kw2);
