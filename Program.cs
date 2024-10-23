@@ -14,8 +14,6 @@ namespace TextRank_Algorithm
         }
         public void addEdge(string kw1, string kw2)
         {
-            if (kw1 == kw2) return;
-            
             if (!adjList.ContainsKey(kw1)) adjList[kw1] = new List<string>();
             if (!adjList.ContainsKey(kw2)) adjList[kw2] = new List<string>();
             if (!adjList[kw1].Contains(kw2)) adjList[kw1].Add(kw2);
@@ -57,7 +55,7 @@ namespace TextRank_Algorithm
         {
             throw new NotImplementedException();
         }
-         //["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"];
+        
         public static string[] stopWords = { "a", "about", "above", "after", "again", "against", "all", "also", "am", "an", "and", "any", "are", "arent", "as", "at", "be", "because", "been", "before", "being", "below", "between", "both", "but", "by", "can", "cant", "cannot", "could", "couldnt", "did", "didnt", "do", "does", "doesnt", "doing", "dont", "down", "during", "each", "few", "for", "from", "further", "had", "hadnt", "has", "hasnt", "have", "havent", "having", "he", "hed", "hell", "hes", "her", "here", "heres", "hers", "herself", "him", "himself", "his", "how", "hows", "i", "id", "ill", "im", "ive", "if", "in", "into", "is", "isnt", "it", "its", "its", "itself", "lets", "me", "more", "most", "mustnt", "my", "myself", "no", "nor", "not", "of", "off", "on", "once", "only", "or", "other", "ought", "our", "ours", "ourselves", "out", "over", "own", "said", "same", "shant", "she", "shed", "shell", "shes", "should", "shouldnt", "so", "some", "such", "than", "that", "thats", "the", "their", "theirs", "them", "themselves", "then", "there", "theres", "these", "they", "theyd", "theyll", "theyre", "theyve", "this", "those", "through", "to", "too", "under", "until", "up", "very", "was", "wasnt", "we", "wed", "well", "were", "weve", "were", "werent", "what", "whats", "when", "whens", "where", "wheres", "which", "while", "who", "whos", "whom", "why", "whys", "will", "with", "wont", "would", "wouldnt", "you", "youd", "youll", "youre", "youve", "your", "yours", "yourself", "yourselves" };
         static List<string> keywordExtraction(string text)
         {

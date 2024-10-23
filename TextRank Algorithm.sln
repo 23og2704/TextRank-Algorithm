@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextRank Algorithm", "TextRank Algorithm.csproj", "{5AD6E947-0390-4DEB-82EB-FEC9EE38929D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImprovedRank", "ImprovedRank\ImprovedRank.csproj", "{BB9AFA75-4F9F-4F6C-B022-0579450510E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AD6E947-0390-4DEB-82EB-FEC9EE38929D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AD6E947-0390-4DEB-82EB-FEC9EE38929D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AD6E947-0390-4DEB-82EB-FEC9EE38929D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9AFA75-4F9F-4F6C-B022-0579450510E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9AFA75-4F9F-4F6C-B022-0579450510E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9AFA75-4F9F-4F6C-B022-0579450510E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9AFA75-4F9F-4F6C-B022-0579450510E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
