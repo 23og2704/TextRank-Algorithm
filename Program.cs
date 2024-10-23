@@ -64,7 +64,7 @@ namespace TextRank_Algorithm
             Graph keywordGraph = createGraph(keywords, windowSize); // create a graph containing each word connected to neighbour words
             Dictionary<string, double> wordValues = keywordGraph.calcPageRank(dampingFactor, iterations); // calculate the score for each word based on its connection to neighbours
 
-            List<KeyValuePair<string, double>> sortedWords = wordValues.OrderByDescending(score => score.Value).ToList(); //Order words in dict by wordValues in descending order (LINQ)
+            List<KeyValuePair<string, double>> sortedWords = wordValues.OrderByDescending(score => score.Value).ToList(); //Order words in dict by wordValues in descending order by score (LINQ)
 
             List<string> finalKeywords = new List<string>();
 
@@ -77,11 +77,18 @@ namespace TextRank_Algorithm
 
         static string[] stopwordFilter(string text)
         {
+
             string[] splitWords = text.ToLower().Split(new char[] {' ', ',', '.', '?', '!', ':', ';', '/'}, StringSplitOptions.RemoveEmptyEntries);
+
+            // Regex.Replace(splitWords, @"[^0-9a-zA-Z:,]+", "");
+
+
+
+
             List<string> keywords = new List<string>();
             foreach (string i in splitWords)
             {
-                if (!stopWords.Contains(i))
+                if (!stopWords.Contains(i)) // list used for .contains
                 {
                     keywords.Add(i);
                 }
@@ -115,7 +122,6 @@ namespace TextRank_Algorithm
         static void Main(string[] args)
         {
             string text = "Encryption is the process of using an algorithm to convert plaintext into ciphertext, a form that cannot be easily understood by a human or machine without knowing how to decrypt it.";
-            //string text = "This is a sample document, and this document is a sample text for keyword extraction using TextRank.";
             var results = keywordExtraction(text);
             Console.WriteLine("After full RAKE process:");
             foreach (var result in results)
